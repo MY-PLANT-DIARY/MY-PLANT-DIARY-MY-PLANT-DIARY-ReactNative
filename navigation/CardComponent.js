@@ -1,10 +1,33 @@
 import * as React from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
-import { Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon, NativeBaseProvider } from 'native-base';
+import {useState} from 'react';
+import { View, Image, Text, StyleSheet,Pressable,} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+let leafcolor;
+let focusable = 'black';
+function leaf(){
+    if(focusable!='green'){
+
+        focusable = 'green';
+    }
+    else{
+        focusable = 'black';
+    }
+    console.log(focusable);
+};
 export default class CardCompnent extends React.Component{
     render(){
+        function leaf(){
+            const [focusable,setfocusable] =state('');
+            if(focusable!='green'){
+
+                setfocusable = 'green';
+            }
+            else{
+                setfocusable = 'black';
+            }
+            console.log(focusable);
+        };
         return (
             <View style={style.feed}>
                 <View style={style.profilebar}>
@@ -18,7 +41,9 @@ export default class CardCompnent extends React.Component{
                 <Image source={{uri:"https://www.kukinews.com/data/kuk/image/2022/07/19/kuk202207190281.680x.0.jpg"}}
                         style={style.image}/>
                 <View style={style.btn}>
-                    <Ionicons name="leaf-outline" size={25}></Ionicons>
+                    <Pressable onPress={()=>leaf()}>
+                        <Ionicons name="leaf-outline" size={25} style={style.leaf}></Ionicons>
+                    </Pressable>
                     <Ionicons name="chatbox-outline" size={25} style={{marginLeft:5}}></Ionicons>
                 </View>
                 <Text style={{marginLeft:12}}>공감 250개</Text>
@@ -65,6 +90,9 @@ const style = StyleSheet.create({
         marginLeft:10,
         margin:5,
         flexDirection:'row',
+    },
+    leaf:{
+        color:focusable
     }
 
 });

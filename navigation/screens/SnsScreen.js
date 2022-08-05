@@ -8,6 +8,8 @@ export default function SnsScreen({navigation}){
             <ScrollView>
                 <CardComponent/>
                 <CardComponent/>
+                <CardComponent/>
+                <CardComponent/>
             </ScrollView>
         </View>
     )
