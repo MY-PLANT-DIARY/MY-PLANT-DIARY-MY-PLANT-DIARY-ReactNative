@@ -25,7 +25,7 @@ export default function DiaryScreen({navigation}){
         if(result.cancelled){
             return null;
         }
-        console.log(result);
+        console.log(result); 
         setImageUrl(result.uri);
     };
     return(

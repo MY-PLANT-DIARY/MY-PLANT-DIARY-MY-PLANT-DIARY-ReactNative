@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { getHeaderTitle, Header, HeaderTitle } from '@react-navigation/elements';
 import {View,Text, Platform} from 'react-native';
+import "react-native-gesture-handler";
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
