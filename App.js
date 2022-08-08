@@ -11,7 +11,7 @@ import Membership from './component/Membership';
 export default function App() {
   const Stack = createStackNavigator();
   return (
-    <NavigationContainer >
+    <NavigationContainer independent={true}>
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Start">
         <Stack.Screen name="Start" component={Start} />
         <Stack.Screen name="Login" component={Login} />
